@@ -1,0 +1,3 @@
+module Subdomains
+  # Your code goes here...
+end
