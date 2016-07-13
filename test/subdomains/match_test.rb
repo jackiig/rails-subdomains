@@ -4,7 +4,6 @@ class Subdomains::Match::Test < ActiveSupport::TestCase
   def setup
     @regex = Subdomains::Match.new(regex: /l_(.*)/)
     @position = Subdomains::Match.new(position: 2)
-    byebug
   end
   test "truth" do
     assert_kind_of Class, Subdomains::Match
