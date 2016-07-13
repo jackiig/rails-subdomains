@@ -1,3 +1,4 @@
+
 module Subdomains
-  # Your code goes here...
+  require 'subdomains/match'
 end
