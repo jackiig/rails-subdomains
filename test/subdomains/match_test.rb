@@ -19,7 +19,7 @@ class Subdomains::Match::Test < ActiveSupport::TestCase
     assert_equal '123', @regex.match('asdf.l_123')
   end
   test "regex returns nil if unmatched" do
-    assert_equal nil, @regex.match('test.google.com')
+    assert_nil @regex.match('test.google.com')
   end
   test "position returns second object from the right" do
     assert_equal '123', @position.match('123.456')
@@ -29,7 +29,7 @@ class Subdomains::Match::Test < ActiveSupport::TestCase
     assert_equal '', @position.match('123.123..123')
   end
   test "position returns nil if position doesn't exist" do
-    assert_equal nil, @position.match('123')
-    assert_equal nil, @position.match('321_789_123_456')
+    assert_nil @position.match('123')
+    assert_nil @position.match('321_789_123_456')
   end
 end
